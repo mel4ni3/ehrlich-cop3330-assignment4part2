@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
++class ToDos {
+- desc: String
+- dueDate: String
+- isComplete: Boolean
++ getDesc(): String
++ getPos(): Boolean
++ editDesc(String str)
++ editDate(String date)
++ editPos(Boolean completed)
+- formatDate(): Date
++ getDate(): Date
+}
+
+@enduml

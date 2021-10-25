@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
++class HelloController {
++ displayTasks(ArrayList<ToDos> tasks, List list)
++ displayNextList(ActionEvent event)
++ displayLists(ArrayList<List> lists)
++ displayAllLists(ActionEvent event)
++ displayAllTasks(ActionEvent event)
++ displayCompleteTasks(ActionEvent event)
++ displayIncompleteTasks(ActionEvent event)
++ saveNextList(ActionEvent event)
++ saveAllLists(ActionEvent event)
++ saveNextTask(ActionEvent event)
++ editTaskDesc(ActionEvent event)
++ editTaskDate(ActionEvent event)
++ editTaskPos(ActionEvent event)
++ deleteNextTask(ActionEvent event)
++ editNextList(ActionEvent event)
++ deleteNextList(ActionEvent event)
+}
+
+@enduml

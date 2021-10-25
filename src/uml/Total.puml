@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
++class Total {
++ ToDoLists: ArrayList<List>
+- Save: ToDoList
++ newList(List list)
++ delList(List list)
++ saveLists()
++ loadLists(): ArrayList<List>
++ saveLastList(List list)
++ loadLastList(): List
++ isValidList(List list): Boolean
++ sortLists(ArrayList<List> toDoLists): ArrayList<List>
+}
+
+@enduml

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lavender;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="495.0" layoutY="33.0" mnemonicParsing="false" style="-fx-background-color: plum;" text="Add Item" />
+      <DatePicker layoutX="293.0" layoutY="33.0" />
+      <Text layoutX="60.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Description" />
+      <Text layoutX="300.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item Due Date" />
+      <TextField layoutX="52.0" layoutY="33.0" prefHeight="26.0" prefWidth="206.0" />
+      <TableView layoutX="38.0" layoutY="82.0" prefHeight="200.0" prefWidth="394.0" style="-fx-background-color: lavender; -fx-border-radius: 10px; -fx-border-width: 5px; -fx-border-color: white;">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Description" />
+          <TableColumn prefWidth="75.0" text="Due Date" />
+            <TableColumn prefWidth="75.0" text="Position" />
+        </columns>
+      </TableView>
+      <Button layoutX="60.0" layoutY="301.0" mnemonicParsing="false" style="-fx-background-color: plum;" text="Save List" />
+      <Button layoutX="164.0" layoutY="301.0" mnemonicParsing="false" style="-fx-background-color: plum;" text="Load List" />
+      <Button layoutX="268.0" layoutY="301.0" mnemonicParsing="false" style="-fx-background-color: plum;" text="Clear List" />
+      <Button layoutX="449.0" layoutY="96.0" mnemonicParsing="false" style="-fx-background-color: plum;" text="Delete Item" />
+      <Button layoutX="449.0" layoutY="146.0" mnemonicParsing="false" style="-fx-background-color: plum;" text="Edit Item Date" />
+      <Button layoutX="449.0" layoutY="200.0" mnemonicParsing="false" style="-fx-background-color: plum;" text="Edit Item Description" />
+   </children>
+</AnchorPane>
