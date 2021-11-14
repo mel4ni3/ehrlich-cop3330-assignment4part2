@@ -2,16 +2,16 @@
 'https://plantuml.com/class-diagram
 
 +class ToDos {
-- desc: String
-- dueDate: String
-- isComplete: Boolean
+- desc: SimpleStringProperty
+- dueDate: SimpleStringProperty
+- isComplete: SimpleBooleanProperty
 + getDesc(): String
-+ getPos(): Boolean
++ getdueDate(): String
++ getisComplete(): Boolean
 + editDesc(String str)
-+ editDate(String date)
-+ editPos(Boolean completed)
-- formatDate(): Date
-+ getDate(): Date
++ editdueDate(String date)
++ editisComplete()
+
 }
 
 @enduml

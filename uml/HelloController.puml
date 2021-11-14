@@ -2,22 +2,38 @@
 'https://plantuml.com/class-diagram
 
 +class HelloController {
-+ displayTasks(ArrayList<ToDos> tasks, List list)
-+ displayNextList(ActionEvent event)
-+ displayLists(ArrayList<List> lists)
-+ displayAllLists(ActionEvent event)
-+ displayAllTasks(ActionEvent event)
-+ displayCompleteTasks(ActionEvent event)
-+ displayIncompleteTasks(ActionEvent event)
-+ saveNextList(ActionEvent event)
-+ saveAllLists(ActionEvent event)
-+ saveNextTask(ActionEvent event)
+    + list: List
+    +{static} display: ObservableList<ToDos>
+    - addItemButton: Button
+    - allButton: Button
+    - clearButton: Button
+    - completeButton: Button
+    - dateField: DatePicker
+    - delItemButton: Button
+    - listTable: TableView<ToDos>
+    - desc: TableColumn<ToDos, String>
+    - dueDate: TableColumn<ToDos, String>
+    -  isComplete: TableColumn<ToDos, Boolean>
+    - descField: TextField
+    - editDateButton:  Button
+    - editDescButton: Button
+    - editPosButton: Button
+    - incompleteButton: Button
+    - loadButton: Button
+    - saveButton: Button
+    - fileField: TextField
++ displayAll(ActionEvent event)
++ displayComplete(ActionEvent event)
++ displayIncomplete(ActionEvent event)
 + editTaskDesc(ActionEvent event)
 + editTaskDate(ActionEvent event)
 + editTaskPos(ActionEvent event)
-+ deleteNextTask(ActionEvent event)
-+ editNextList(ActionEvent event)
-+ deleteNextList(ActionEvent event)
++ addAction(ActionEvent event)
++ removeAction(ActionEvent event)
++ clearAction(ActionEvent event)
++ saveAction(ActionEvent event)
++ loadAction(ActionEvent event)
++ initialize(URL location, ResourceBundle resources)
 }
 
 @enduml

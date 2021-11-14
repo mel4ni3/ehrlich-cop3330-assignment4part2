@@ -1,56 +1,59 @@
 /*
- *  UCF COP3330 Summer 2021 Assignment 4 Solution
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
  *  Copyright 2021 Melanie Ehrlich
  */
 
 package ucf.assignments;
 
-import java.util.Date;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+
 
 public class ToDos {
 
     // fields:
-    // Private String desc containing task description
-    // Private String dueDate containing task due date
-    // Private Boolean isComplete which is true if the task is complete and false otherwise
+    SimpleStringProperty desc; //containing task description
+    SimpleStringProperty dueDate; //containing task due date
+    SimpleBooleanProperty isComplete; //true if the task is complete and false otherwise
 
     // constructor for creating a new task
     public ToDos(String desc, String dueDate){
-        // assigns the task's desc and dueDate fields to the appropriate parameters
+        this.desc = new SimpleStringProperty(desc);
+        this.dueDate = new SimpleStringProperty(dueDate);
+        this.isComplete = new SimpleBooleanProperty(false); // false until the editPos button is clicked
     }
 
     // getter for task description
-    //public String getDesc(){
-        //return the description field of the ToDos object
-    //}
+    public String getDesc(){
+        return desc.get();
+    }
 
-    // getter for task position
-    //public Boolean getPos() {
-        // returns the isComplete field of the ToDos object
-   //}
+    // getter for task due date
+    public String getdueDate(){
+        return dueDate.get();
+    }
+
+    // getter for task completion
+    public Boolean getisComplete() {
+        return isComplete.get();
+   }
 
     // method for editing the task description
-    public void editDesc(String str){
-        // changes the ToDos object's description field to str
+    public void editDesc(String str) {
+        this.desc = new SimpleStringProperty(str);
     }
 
     // method for editing the task date
-    public void editDate(String date){
-        // changes the ToDos object's dueDate field to date
+    public void editdueDate(String date){
+        this.dueDate = new SimpleStringProperty(date);
     }
 
     // method for editing if the task is completed
-    public void editPos(Boolean completed){
-        // changes the ToDos object's isComplete value to completed
+    public void editisComplete(){
+        if (isComplete.get())
+            this.isComplete = new SimpleBooleanProperty(false);
+        else
+            this.isComplete = new SimpleBooleanProperty(true);
     }
 
-    // method for formatting Date object
-    //private Date formatDate(){
-        // create new date object, formats string from date object and returns the date object
-    //}
-
-    // method for returning Date object
-    //public Date getDate(){
-        // returns the Date object from formatDate()
-    //}
 }

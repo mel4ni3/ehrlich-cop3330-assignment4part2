@@ -2,16 +2,15 @@
 'https://plantuml.com/class-diagram
 
 +class List {
-- name: String
 - tasks: Arraylist<ToDos>
-+ editName(String str)
 + addTask(ToDos task)
 + deleteTask(ToDos task)
-+ getIncomplete(List toDoList): ArrayList<ToDos>
-+ getComplete(List toDoList): ArrayList<ToDos>
-+ getName(): String
-+ getTasks(List toDoList): ArrayList<ToDos>
-+ saveNextList(ActionEvent event)
++ getIncomplete(): ArrayList<ToDos>
++ getComplete(): ArrayList<ToDos>
++ getTasks(): ArrayList<ToDos>
++ clear()
++ saveList(File fileDirectory)
++ loadList(File fileDirectory): List
 
 }
 

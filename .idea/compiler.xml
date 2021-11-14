@@ -3,4 +3,9 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="16" />
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ehrlich-cop3330-assignment4.main" options="--add-exports javafx.fxml/javafx=src.main.java.ucf.assignments" />
+    </option>
+  </component>
 </project>
