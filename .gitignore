@@ -3,4 +3,4 @@
 # Project exclude paths
 /.gradle/
 /lists/
-/listTests
+/listTests/
